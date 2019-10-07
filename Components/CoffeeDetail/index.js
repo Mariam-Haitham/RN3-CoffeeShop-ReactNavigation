@@ -41,7 +41,8 @@ class CoffeeDetail extends Component {
 
   render() {
     if (!cafes) return <Content />;
-    const cafe = cafes[0];
+    const id = navigation.getParam("itemID", 1);
+    const cafe = cafes.find(caf => caf.id == id);
     return (
       <Content>
         <List>
