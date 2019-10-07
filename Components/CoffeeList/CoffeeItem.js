@@ -3,6 +3,7 @@ import { ImageBackground, View } from "react-native";
 
 // NativeBase Components
 import { ListItem, Card, CardItem, Thumbnail, Text, Left } from "native-base";
+import { withNavigation } from "react-navigation";
 
 // Style
 import styles from "./styles";
@@ -40,4 +41,4 @@ const CoffeeItem = ({ cafe, navigation }) => {
   );
 };
 
-export default CoffeeItem;
+export default withNavigation(CoffeeItem);
